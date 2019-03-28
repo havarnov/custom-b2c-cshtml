@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet"/>
     <script>
         function inputonblur() {
-            history.pushState(stateObj, "with_domain_hint", window.location + "&domain_hint=foo");
+            alert(window.location + "&domain_hint=foo");
+            history.pushState({}, "with_domain_hint", window.location + "&domain_hint=foo");
         }
         let input = document.querySelector('#logonIdentifier');
         input.onblur = inputonblur;
