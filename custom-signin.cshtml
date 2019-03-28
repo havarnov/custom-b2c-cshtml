@@ -11,7 +11,7 @@
             let i = document.querySelector('#logonIdentifier');
             let domain = i.value.split("@")[1];
             alert(window.location + "&domain_hint=" + domain);
-            history.pushState({}, "with_domain_hint", window.location + "&domain_hint=" + domain);
+            window.location.href = window.location + "&domain_hint=" + domain;
         }
         let input = document.querySelector('#logonIdentifier');
         input.onblur = inputonblur;
