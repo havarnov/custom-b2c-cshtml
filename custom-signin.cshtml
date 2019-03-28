@@ -9,9 +9,9 @@
     <script>
         function inputonblur() {
             let i = document.querySelector('#logonIdentifier');
-            let domain = i.split("@")[1];
+            let domain = i.value.split("@")[1];
             alert(window.location + "&domain_hint=" + domain);
-            history.pushState({}, "with_domain_hint", window.location + "&domain_hint=foo");
+            history.pushState({}, "with_domain_hint", window.location + "&domain_hint=" + domain);
         }
         let input = document.querySelector('#logonIdentifier');
         input.onblur = inputonblur;
